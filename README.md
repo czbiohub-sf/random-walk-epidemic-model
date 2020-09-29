@@ -3,4 +3,4 @@ This repository contains code and data for the paper _A Random-Walk-Based Epidem
 ## Directories and files ##
 
 * [data](data) - data files
-* [R0-prediction][R0-prediction] - code for generation of R0 prediction figure
+* [R0-prediction](R0-prediction) - code for generation of R0 prediction figure

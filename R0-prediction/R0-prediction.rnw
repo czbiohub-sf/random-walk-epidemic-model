@@ -1,0 +1,88 @@
+\documentclass[fleqn,10pt]{wlscirep}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\setlength{\textwidth}{175mm}
+\setlength{\textheight}{245mm}
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\topmargin}{-25mm}
+
+\begin{document}
+
+\begin{abstract}
+  Here we generate figures for the random walkers paper.
+\end{abstract}
+\title{$R_0$ figure for SARS-CoV-2 Random Walk Epidemiological Model}
+\author[1]{Andrew Chu}
+\author[1]{Greg Huber}
+\author[1]{Aaron McGeever}
+\author[2]{Boris Veytsman}
+\author[1]{David Yllanes}
+\affil[1]{Chan Zuckerberg Biohub, 499 Illinois Street, San Francisco, CA 94158, USA} 
+\affil[2]{Chan Zuckerberg Initiative, 601 Marshall St, Redwood City,
+  CA 94063, USA}
+\date{September 2020}
+\maketitle
+
+
+Setting things up:
+<<setup>>=
+opts_chunk$set(
+    dev='tikz',
+    cache=T
+)
+#options(tikzDefaultEngine='luatex')
+library(tidyverse)
+library(ggthemes)
+theme_set(theme_bw())
+@
+
+Reading the data:
+<<reading>>=
+data <- read_csv("../data/R0griddata.csv.gz")
+data
+@ 
+
+First, na\"ive prediction
+<<naive>>=
+data <- data %>% mutate(naive=p*tau)
+@ 
+
+
+Now, the theoretical prediction.  Let us use zero adjustable
+parameters, taking $c_2$ from the structure factor and assuming
+$q_0=1$: 
+<<prediction>>=
+c2 <- 0.4575445
+K <- 1/(4*pi*c2)
+K
+tau0 <- 1/c2
+tau0
+data <- data %>% mutate(exact=p*tau/(1+K*p*log(tau/tau0))) %>%
+    pivot_longer(cols=c('naive', 'exact'), names_to='type',
+                 values_to='prediction') %>%
+    mutate(type=factor(type, levels=c('naive', 'exact'),
+                       labels=c('Na\\"ive prediction',
+                       'Exact prediction')))
+@ 
+
+
+<<predicted>>=
+ggplot(data) + geom_point(aes(prediction,
+    r0, color=as.factor(p))) +
+    xlim(0,100) + ylim(0,100) +
+    coord_fixed(ratio=1) +
+    facet_wrap(~type, nrow=1) + 
+    geom_abline(intercept=0, slope=1) +
+    xlab("$R_0^{\\text{(predicted)}}$") +
+    ylab("$R_0^{\\text{(simulated)}}$") +
+    labs(color="$p$") 
+@ 
+
+\end{document}
