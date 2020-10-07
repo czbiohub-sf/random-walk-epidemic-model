@@ -1,0 +1,15 @@
+name = "GridBreak"
+authors = ["Aaron McGeever <aaron.mcgeever@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+LsqFit = "2fda8390-95c7-5789-9bda-21331edee243"
+Measures = "442fdcdd-2543-5da2-b0f3-8c86c306513e"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
+Profile = "9abbd945-dff8-562f-b5e8-e1ebf5ef1b79"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+StatPlots = "60ddc479-9b66-56df-82fc-76a74619b69c"
