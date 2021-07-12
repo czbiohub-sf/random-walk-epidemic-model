@@ -10,8 +10,11 @@ This repository contains code and data for the paper _A Random-Walk-Based Epidem
 * [Figure 3](Figure_3.ipynb) - code for generating figure 3
 * [Figure 4](Figure_4.ipynb) - code for generating figure 4
 * [Figure 5](Figure_5.ipynb) - code for generating figure 5. Uses data from "Figure_5_data.jld" in data folder
-* [Figure 6](Figure_6.ipynb) - code for generating figure 6. Uses data from files beginning with "rg_ar_" in data folder
+* Figure 6 - Uses data located in the [Google Drive folder](https://drive.google.com/drive/folders/1FtTw2a9yRfbeCAfFGvMAgRWLOo2wszKb?usp=sharing).
+* Figure 7 - Uses data located in the [Google Drive folder](https://drive.google.com/drive/folders/1FtTw2a9yRfbeCAfFGvMAgRWLOo2wszKb?usp=sharing).
 * [Table 1](Table_1.ipynb) - code for generating table 1
+* [Figure S2](Figure_S2.ipynb) - code for generating figure S2. Uses data from files beginning with "rg_ar_" in data folder
+* [Figures S3 - S5](Figures_S3-5.ipynb) - code for generating figures S3 - S5. Uses data located in the [Google Drive folder](https://drive.google.com/drive/folders/1FtTw2a9yRfbeCAfFGvMAgRWLOo2wszKb?usp=sharing).
 * [Iso-R0 Estimation](isoR0Estimation.ipynb) - code for generating data for iso-R0 lines in figure 4
 * [Phase Diagram](phasediagram.ipynb) - code for generating data for phase diagram in figure 4
 * [Radius of Gyration and Attack Rate Calculation](rofgyr_attrate_calculation.ipynb) - code for calculating radius of gyration and attack rate data in figure 6.
