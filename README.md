@@ -15,3 +15,5 @@ This repository contains code and data for the paper _A Random-Walk-Based Epidem
 * [Iso-R0 Estimation](isoR0Estimation.ipynb) - code for generating data for iso-R0 lines in figure 4
 * [Phase Diagram](phasediagram.ipynb) - code for generating data for phase diagram in figure 4
 * [Radius of Gyration and Attack Rate Calculation](rofgyr_attrate_calculation.ipynb) - code for calculating radius of gyration and attack rate data in figure 6.
+* [Cluster Simulation](clusterSimulation.jl) - code for simulating outbreaks and calculating the radius of gyration, cluster mass, and cluster surface points in figures 6 and 7.
+* [utils.jl](utils.jl) - helper functions for [Cluster Simulation](clusterSimulation.jl).
