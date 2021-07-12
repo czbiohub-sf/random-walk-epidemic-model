@@ -4,7 +4,7 @@ This repository contains code and data for the paper _A Random-Walk-Based Epidem
 
 * [Manifest.toml](Manifest) - used to set up Julia environment
 * [Project.toml](Project) - used to set up Julia environment
-* [data](data) - data files. ".jld" files are compatible with Julia
+* [data](data) - data files. ".jld" files are compatible with Julia. Additional data is provided in this [Google Drive folder](https://drive.google.com/drive/folders/1FtTw2a9yRfbeCAfFGvMAgRWLOo2wszKb?usp=sharing) due to Github file size limits.
 * [R0-prediction](R0-prediction) - code for generation of R0 prediction figure
 * [Figure 1c](Figure_1c.ipynb) - code for generating figure 1c
 * [Figure 3](Figure_3.ipynb) - code for generating figure 3
