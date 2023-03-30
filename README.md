@@ -1,4 +1,4 @@
-This repository contains code and data for the paper _A Random-Walk-Based Epidemiological Model_ by Andrew Chu, Greg Huber, Aaron McGeever, Boris Veytsman and David Yllanes
+This repository contains code and data for the paper [_A Random-Walk-Based Epidemiological Model_ by Andrew Chu, Greg Huber, Aaron McGeever, Boris Veytsman and David Yllanes](https://www.nature.com/articles/s41598-021-98211-5).
 
 ## Directories and files ##
 
